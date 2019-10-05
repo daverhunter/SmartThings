@@ -31,7 +31,7 @@
  *****************************************************************************************************************/
 definition(
     name: "InfluxDB Logger",
-    namespace: "codersaur",
+    namespace: "daverhunter",
     author: "David Lomas (codersaur)",
     description: "Log SmartThings device states to InfluxDB",
     category: "My Apps",
@@ -790,8 +790,13 @@ private escapeStringForInfluxDB(str) {
 private getGroupName(id) {
 
     if (id == null) {return 'Home'}
-    else if (id == 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX') {return 'Kitchen'}
-    else if (id == 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX') {return 'Lounge'}
-    else if (id == 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX') {return 'Office'}
+    else if (id == '03c50a76-b4d8-4811-aa6f-cccc56bd53bc') {return 'Kitchen'}
+    else if (id == 'e306cfde-2119-437c-ab31-8902fc6d714b') {return 'Living Room'}
+    else if (id == 'df963548-8b05-4547-aae2-d5dc587bd2fc') {return 'Staircase'}
+    else if (id == '9a23d978-0f27-4231-a456-b698b4b9a548') {return 'Bedroom'}
+    else if (id == '7cbfce08-c95b-4df8-bee5-2f476c7d0906') {return 'Bathroom'}
+    else if (id == 'bd58fdeb-a2ec-4d7d-80dc-07f17a8618de') {return 'Dexters Bedroom'}
+    else if (id == '60dcc62f-225a-4b0b-b021-2067ca9fc512') {return 'Front Garden'}
+    else if (id == 'a945bd28-b765-4f28-9a64-fb286ad8fee4') {return 'Back Garden'}
     else {return 'Unknown'}    
 }
